@@ -1,0 +1,165 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Home Page{% endblock %}</title>
+    <!-- Bootstrap 4 CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/bs4/bootstrap.min.css' %}"/>
+    <!-- Main Jquery -->
+    <script type="text/javascript" src="{% static 'vendor/jquery.min.js' %}"></script>
+    <!-- Bootstrap Js -->
+    <script type="text/javascript" src="{% static '/vendor/bs4/bootstrap.min.js' %}"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+<!-- Top News -->
+<nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary bg-white text-white">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'home' %}">
+            <img src="https://kun.uz/assets/99110d40/img/kun-uz-logo.svg">
+        </a>
+        <div class="collapse navbar-collapse ml-auto" id="navbarNavAltMarkup">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active text-dark">
+                    <a class="nav-link text-dark" href="/">Главная страница</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="{% url 'all-news' %}">Все новости</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="{% url 'all-category' %}">Все категорие</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+{% block content %}
+{% endblock %}
+
+<hr/>
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block ">
+            <span>Наши соц сети:</span>
+        </div>
+        <!-- Left -->
+
+        <!-- Right -->
+        <div>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-google"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+        <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <!-- Content -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        <i class="fas fa-gem me-3"></i>Company info
+                    </h6>
+                    <p style="text-align: left">
+                        Воспроизводство, копирование, тиражирование, распространение и иное использование информации с
+                        сайта «KUN.UZ» возможно только с предварительного письменного разрешения редакции.
+                        KUN.UZ. Свидетельство: №0987 Дата выдачи: 22.06.2015 год
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        Products
+                    </h6>
+                    <p>
+                        <a href="#!" class="text-reset">Angular</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">React</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Vue</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Laravel</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        Useful links
+                    </h6>
+                    <p>
+                        <a href="#!" class="text-reset">Pricing</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Settings</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Orders</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Help</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                    <p><a href="#">Yunusabod 18kv</a></p>
+                    <p>
+                        <a href="email:igarri80@gmail.com">vuy@gmail.com</a>
+                    </p>
+                    <a href="tel:+998909935377"><p><i class="fas fa-phone me-3 text-dark"></i> +998 90 9977979</p></a>
+                    <a href="tel:+998909935377"><p><i class="fas fa-print me-3 text-dark"></i> +998 90 7700707</p></a>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        Ⓣ - этот знак свидетельствует о том, что статья или материал носит коммерческий характер и публикуется на правах
+        рекламы.
+
+    </div>
+    <!-- Copyright -->
+</footer>
+<!-- Footer -->
+</body>
+</html>
